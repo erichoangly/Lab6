@@ -16,8 +16,25 @@ def encoder(old): # encoder function
                 new +='2'
     print('Your password has been encoded and stored!')
     print('')
-
-
+#new added code by partner
+def decoder(input_value):
+    #setting the variables needed
+    int(input_value)
+    real_list = []
+    final_value = ''
+    #making the input into a list
+    for i in range(len(input_value)):
+        real_list.append(int(input_value[i]))
+    #subtracting three from every index
+    for i in range(len((real_list))):
+        real_list[i] = real_list[i] - 3
+        #if it becomes less then zero you transfer it be under 10
+        if real_list[i] < 0:
+            real_list[i] = real_list[i] + 10
+    #take the index and make it into a string
+    for i in range(len(real_list)):
+        final_value = final_value + str(real_list[i])
+    return final_value
 def main(): # main function
     while True:
         print('Menu') # creating the menu
